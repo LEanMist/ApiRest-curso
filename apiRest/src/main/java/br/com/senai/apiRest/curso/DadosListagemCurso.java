@@ -5,4 +5,10 @@ public record DadosListagemCurso(
         String nome,
         Curso.Periodo periodo
 ) {
+    public DadosListagemCurso(Curso curso){
+        this(
+                curso.getId(),
+                curso.getNome(),
+                curso.getPeriodo());
+    }
 }

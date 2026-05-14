@@ -16,10 +16,15 @@ public class Curso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(nullable = false, unique = true, length = 100)
     private String nome;
 
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private Periodo periodo;
+
+    @Column(nullable = false)
     private boolean ativo;
 
     public enum Periodo{

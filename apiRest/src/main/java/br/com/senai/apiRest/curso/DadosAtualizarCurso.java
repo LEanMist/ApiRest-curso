@@ -1,12 +1,13 @@
 package br.com.senai.apiRest.curso;
 
-import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public record DadosAtualizarCurso(
+        @NotNull
         Long id,
 
-        @Size(min = 3,max = 60)
+        @Size(min = 3,max = 100)
         String nome,
 
         Curso.Periodo periodo
